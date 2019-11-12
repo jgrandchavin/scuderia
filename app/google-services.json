@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "309300438419-7ceehhe07f9qaqumq8uql8mtevv62kl0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.juliengrandchavin.scuderia",
+            "certificate_hash": "fabc2fff0f367fdc8a246865f3137f4b41e5190a"
+          }
+        },
+        {
           "client_id": "309300438419-ht3f5odvatjhe778a15i5r7v2jqnl40e.apps.googleusercontent.com",
           "client_type": 3
         }
