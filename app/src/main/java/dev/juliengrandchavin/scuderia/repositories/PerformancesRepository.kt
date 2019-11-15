@@ -1,9 +1,8 @@
 package dev.juliengrandchavin.scuderia.repositories
 
-import SkillName
+import dev.juliengrandchavin.scuderia.constants.SkillName
 import android.content.SharedPreferences
 import dev.juliengrandchavin.scuderia.models.Skill
-import com.google.gson.Gson
 import dev.juliengrandchavin.scuderia.R
 
 
@@ -33,7 +32,7 @@ class PerformancesRepository(var sharedPreferences: SharedPreferences) {
             SkillName.BREAK -> {
                 sharedPreferences.getInt("break", 1)
             }
-            SkillName.CHASSIS ->{
+            SkillName.CHASSIS -> {
                 sharedPreferences.getInt("chassis", 1)
             }
             SkillName.AERO -> {
@@ -54,11 +53,11 @@ class PerformancesRepository(var sharedPreferences: SharedPreferences) {
     }
 
     fun getLevelUpdatePrice(skill: SkillName): Int {
-       val currentLevel = when (skill) {
+        val currentLevel = when (skill) {
             SkillName.BREAK -> {
                 sharedPreferences.getInt("break", 1)
             }
-            SkillName.CHASSIS ->{
+            SkillName.CHASSIS -> {
                 sharedPreferences.getInt("chassis", 1)
             }
             SkillName.AERO -> {

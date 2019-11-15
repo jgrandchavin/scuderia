@@ -119,17 +119,25 @@
             app:layout_constraintStart_toEndOf="@+id/startText"
             app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
-        <ListView
-            android:id="@+id/resultListView"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/rounded_white_button_shape"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lfwe" />
+            app:layout_constraintTop_toBottomOf="@+id/lfwe">
+
+            <ListView
+                android:id="@+id/resultListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/primaryBlack"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp" />
+        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

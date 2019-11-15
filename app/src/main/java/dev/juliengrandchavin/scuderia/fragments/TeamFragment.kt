@@ -1,7 +1,7 @@
 package dev.juliengrandchavin.scuderia.fragments
 
 
-import RaceResult
+import dev.juliengrandchavin.scuderia.models.RaceResult
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
@@ -13,7 +13,6 @@ import android.widget.ListView
 import android.widget.TextView
 import dev.juliengrandchavin.scuderia.R
 import dev.juliengrandchavin.scuderia.adapter.RaceResultAdapter
-import dev.juliengrandchavin.scuderia.adapter.SkillsAdapter
 
 import dev.juliengrandchavin.scuderia.repositories.TeamRepository
 
@@ -39,7 +38,8 @@ class TeamFragment : Fragment() {
         teamMoneyText.text = teamRepository.getCurrentTeamMoney().toString() + "k"
         teamWinText.text = teamRepository.getWinCount().toString()
         teamStart.text = teamRepository.getStartCount().toString()
-        val adapter = RaceResultAdapter(container.context,
+        val adapter = RaceResultAdapter(
+            container.context,
             teamRepository.getResults().reversed() as ArrayList<RaceResult>
         )
         resultListView.adapter = adapter

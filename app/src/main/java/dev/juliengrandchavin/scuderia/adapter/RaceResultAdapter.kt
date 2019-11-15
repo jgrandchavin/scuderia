@@ -1,6 +1,6 @@
 package dev.juliengrandchavin.scuderia.adapter
 
-import RaceResult
+import dev.juliengrandchavin.scuderia.models.RaceResult
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater

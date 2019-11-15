@@ -11,9 +11,9 @@ import android.view.ViewGroup
 import android.widget.ListView
 import android.widget.TextView
 
-import dev.juliengrandchavin.scuderia.R
 import dev.juliengrandchavin.scuderia.repositories.PerformancesRepository
 import android.content.SharedPreferences
+import dev.juliengrandchavin.scuderia.R
 import dev.juliengrandchavin.scuderia.repositories.TeamRepository
 
 

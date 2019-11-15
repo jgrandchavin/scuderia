@@ -14,9 +14,9 @@ class RaceResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_race_result)
 
-        var driver1Rank = intent.getIntExtra("driver1Place", 20)
-        var driver2Rank = intent.getIntExtra("driver2Place", 19)
-        var cashPrize = intent.getIntExtra("cashPrize", 10)
+        val driver1Rank: Int = intent.getIntExtra("driver1Place", 20)
+        val driver2Rank: Int = intent.getIntExtra("driver2Place", 19)
+        val cashPrize: Int = intent.getIntExtra("cashPrize", 10)
 
         val backButton = findViewById<Button>(R.id.backButton)
         val resultText = findViewById<TextView>(R.id.resultText)

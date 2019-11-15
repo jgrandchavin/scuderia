@@ -1,6 +1,6 @@
 package dev.juliengrandchavin.scuderia.repositories
 
-import RaceResult
+import dev.juliengrandchavin.scuderia.models.RaceResult
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import dev.juliengrandchavin.scuderia.models.Team
@@ -34,7 +34,7 @@ class TeamRepository(var sharedPreferences: SharedPreferences) {
         return team.raceResults
     }
 
-    fun buy(value: Int) : Boolean {
+    fun buy(value: Int): Boolean {
         val teamInJson: String = sharedPreferences.getString("team", "")!!
         val team = gson.fromJson(teamInJson, Team::class.java)
         val editor = sharedPreferences.edit()
@@ -44,7 +44,7 @@ class TeamRepository(var sharedPreferences: SharedPreferences) {
             team.money = team.money - value
             editor.putString("team", gson.toJson(team))
             editor.apply()
-           return true
+            return true
         }
     }
 
@@ -79,7 +79,7 @@ class TeamRepository(var sharedPreferences: SharedPreferences) {
         val performancesRepository = PerformancesRepository(sharedPreferences)
         val skills = performancesRepository.getSkills()
 
-        return skills.sumBy { skill ->  skill.currentLevel}
+        return skills.sumBy { skill -> skill.currentLevel }
     }
 
     fun addResult(result: RaceResult) {

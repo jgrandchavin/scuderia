@@ -16,7 +16,7 @@ import dev.juliengrandchavin.scuderia.constants.tracks
 import kotlinx.android.synthetic.*
 import java.util.*
 
- class RaceFragment : Fragment() {
+class RaceFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -39,20 +39,23 @@ import java.util.*
         trackNameText.text = tracks.shuffled().first()
 
         startRaceButton.setOnClickListener {
-            val result = raceRepository.simulateRace( trackNameText.text.toString())
+            val result = raceRepository.simulateRace(trackNameText.text.toString())
             val intent = Intent(container.context, RaceResultActivity::class.java)
             intent.putExtra("driver1Place", result.driver1Rank)
             intent.putExtra("driver2Place", result.driver2Rank)
-            intent.putExtra("cashPrize", raceRepository.getCashPrize(result.driver1Rank, result.driver2Rank))
+            intent.putExtra(
+                "cashPrize",
+                raceRepository.getCashPrize(result.driver1Rank, result.driver2Rank)
+            )
             startActivity(intent)
         }
 
         return view
     }
 
-     override fun onResume() {
+    override fun onResume() {
         super.onResume()
-        val view =  view!!
+        val view = view!!
 
         val trackNameText = view.findViewById<TextView>(R.id.trackNameText)
         trackNameText.text = tracks.shuffled().first()

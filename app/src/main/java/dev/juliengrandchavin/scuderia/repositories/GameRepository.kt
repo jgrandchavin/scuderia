@@ -9,8 +9,8 @@ class GameRepository(var sharedPreferences: SharedPreferences) {
     fun initGame() {
         val isGameInit: Boolean = sharedPreferences.getBoolean("IsGameInit", false)
 
-        if (!isGameInit)  {
-            val team = Team(300,0, 0, arrayListOf())
+        if (!isGameInit) {
+            val team = Team(300, 0, 0, arrayListOf())
             val editor = sharedPreferences.edit()
             editor.putString("team", gson.toJson(team))
             editor.putInt("break", 1)

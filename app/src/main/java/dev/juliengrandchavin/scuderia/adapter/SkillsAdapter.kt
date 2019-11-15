@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import dev.juliengrandchavin.scuderia.R
+import dev.juliengrandchavin.scuderia.constants.SkillName
 import dev.juliengrandchavin.scuderia.models.Skill
 import dev.juliengrandchavin.scuderia.repositories.PerformancesRepository
 
@@ -84,7 +85,7 @@ class SkillsAdapter(
 
         improveButton.setOnClickListener {
 
-            if ( teamRepository.buy(performancesRepository.getLevelUpdatePrice(skill.skillName))) {
+            if (teamRepository.buy(performancesRepository.getLevelUpdatePrice(skill.skillName))) {
                 performancesRepository.updateSkills(skill.skillName)
 
                 val text = "${skill.skillName} amélioré"

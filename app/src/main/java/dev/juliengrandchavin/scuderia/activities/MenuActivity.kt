@@ -12,14 +12,14 @@ import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity() {
 
-    var raceFragment = RaceFragment()
-    var performancesFragment = PerformancesFragment()
-    var teamFragment = TeamFragment()
+    private var raceFragment = RaceFragment()
+    private var performancesFragment = PerformancesFragment()
+    private var teamFragment = TeamFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-       goToRace()
+        goToRace()
 
         raceButton.setOnClickListener {
             goToRace()
