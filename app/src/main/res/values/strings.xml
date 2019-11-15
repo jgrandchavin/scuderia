@@ -4,5 +4,13 @@
     <string name="register">S\'inscrire</string>
     <string name="no_account">Pas de compte ? S’inscrire</string>
     <string name="have_account">Déjà un compte ? Se connecter</string>
+    <string name="race">Race</string>
+    <string name="performances">Performances</string>
+    <string name="team">Team</string>
+    <string name="take_start">Prendre le départ</string>
+    <string name="improve">Améliorer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 

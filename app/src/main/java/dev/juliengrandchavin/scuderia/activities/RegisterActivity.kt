@@ -1,7 +1,8 @@
-package dev.juliengrandchavin.scuderia
+package dev.juliengrandchavin.scuderia.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import dev.juliengrandchavin.scuderia.R
 
 class RegisterActivity : AppCompatActivity() {
 
