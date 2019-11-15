@@ -35,6 +35,6 @@ class PerformancesRepository(var sharedPreferences: SharedPreferences) {
     }
 
     fun getLevelUpdatePrice(currentLevel: Int) : Int {
-        return currentLevel * 10
+        return currentLevel * 13
     }
 }
