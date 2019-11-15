@@ -9,6 +9,8 @@
     <string name="team">Team</string>
     <string name="take_start">Prendre le départ</string>
     <string name="improve">Améliorer</string>
+    <string name="statistics">Statistiques</string>
+    <string name="lastRace">Dernières courses</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
